@@ -39,6 +39,9 @@
 
 	    <div class="text-center">
 	    	<% 
+	    	//1초에 한번씩 새로고침 (현재시간을 1초간 새로고침)
+	    	response.setIntHeader("Refresh", 1);
+	    	
 		      Date today = new Date();
 		      SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a") ;
 		      out.println("현재 접속 시간: " + format.format(today));
