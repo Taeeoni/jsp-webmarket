@@ -20,7 +20,6 @@ public class ProductRepository {
 		phone.setManufacturer("Apple");
 		phone.setUnitsInStock(1000);
 		phone.setCondition("New");
-		
 		Product notebook = new Product("P1235", "LG PC 그램", 1500000);
 		notebook.setDescription("4.7-inch, 1334X750 Retina HD display, 어쩌구");
 		notebook.setCategory("Smart Phone");
