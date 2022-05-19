@@ -45,4 +45,18 @@ public class ProductRepository {
 		return products;
 		
 	}
+	
+	//ID로 상품 찾기
+	public Product getProductById(String productId) {
+		//원래 코드는 p.173 참고 
+		return products.stream() // 상품 개수만큼 흘러갑니다.
+				//필요한것 거르기 filter() -> product라는 객체변수를 통해서 받아와서 
+				//그것의 id를 받는다(getProductId())
+				//받아온 id가 파라미터 productId와 같은것을 찾아서!
+				.filter((product) -> product.getProductId().equals(productId))
+				.findFirst() // 첫번째 것 
+				.get(); // 언어
+	}
+
+
 }
