@@ -12,14 +12,7 @@
 	<title>Welcome</title>
 </head>
 <body>
-	<nav class = "navbar navbar-expand navbar-dark bg-dark">
-	    <div class="container">
-	        <div class="navbar-header">
-	        <% //nav은 보통 ul li 를 활용 %> 
-	        	<a class="navbar-brand" href="./welcome.jsp">Home</a>
-	        </div>
-	    </div>
-	</nav>
+	<jsp:include page="menu.jsp" />
 	<%!
 	// 변수, 메소드 선언
 	String greeting = "웹 쇼핑몰에 오신 것을 환영합니다";
