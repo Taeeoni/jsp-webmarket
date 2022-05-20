@@ -11,6 +11,16 @@ public class ProductRepository {
 	// list의 형식을 class (Product)로 주어서 리스트 정보가 클래스에 가게끔 
 	private List<Product> products = new ArrayList<>();
 	
+	//하나의 객체를 생성 후 인스턴스를 재사용하는 싱글턴 패턴 
+	// static은 바로 처음에 메모리에 들어간다.
+	// static은 독자적이고 static안에서 다른 것들과(static 이 아닌것들)서로 보이지 않는다. ( products(List)를 바로 사용할 수 없다.)
+	private static ProductRepository instance = new ProductRepository();
+	// private으로 만들어 주면 다른데서 new로 새로 생성 할 수 없다.
+	// => 결과적으로 bean 해준것과 같게된다.
+	public static ProductRepository getInstance() {
+		return instance;
+	}
+	
 	public ProductRepository() {
 		// 원래는 DB에서 가져올 데이터 
 		// 지금은 그냥 3개 임의로 만든거임 
@@ -55,6 +65,12 @@ public class ProductRepository {
 				.filter((product) -> product.getProductId().equals(productId))
 				.findFirst() // 첫번째 것 
 				.get(); // 언어
+	}
+	
+	
+	//상품 추가
+	public void addProduct(Product product) {
+		products.add(product);
 	}
 
 

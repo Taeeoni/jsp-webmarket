@@ -2,8 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.List" %>
 <%@ page import="dto.Product" %>
+<%@ page import="dao.ProductRepository" %>
 <!-- class에 있는걸 id의 이름으로 사용하겠다. -->
-<jsp:useBean id = "repository" class ="dao.ProductRepository" scope = "session"></jsp:useBean>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,7 +26,8 @@
 	<%
 	//6줄 => ProductRepository repository = new ProductRepository() 로 해도 된다. 
 	//Product 클래스를 사용하기위해 repository 변수를 이용해서 객체를 불러온다.
-	//
+	
+	ProductRepository repository = ProductRepository.getInstance();
 	List<Product> products = repository.getAllProducts();
 	
 	%>

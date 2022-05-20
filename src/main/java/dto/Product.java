@@ -84,12 +84,12 @@ public class Product implements Serializable{
 	
 	// 데이터들을 String으로서 보게끔 하기 위해 틀을 만들어 주는 느낌
 	// toString을 해주지 않으면 hash 코드 형태로 나온다. ex) dto.Product@41a4892 
-	@Override
-	public String toString() {
-		return "Product [productId=" + productId + ", name=" + name + ", unitPrice=" + unitPrice + ", description="
-				+ description + ", manufacturer=" + manufacturer + ", category=" + category + ", unitsInStock="
-				+ unitsInStock + ", condition=" + condition + "]";
-	}
+	//@Override
+	//public String toString() {
+	//	return "Product [productId=" + productId + ", name=" + name + ", unitPrice=" + unitPrice + ", description="
+	//			+ description + ", manufacturer=" + manufacturer + ", category=" + category + ", unitsInStock="
+	//			+ unitsInStock + ", condition=" + condition + "]";
+	//}
 	
 	
 	
