@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
@@ -40,11 +42,26 @@
 	    <div class="text-center">
 	    	<% 
 	    	//1초에 한번씩 새로고침 (현재시간을 1초간 새로고침)
-	    	response.setIntHeader("Refresh", 1);
+	    	//response.setIntHeader("Refresh", 1);
 	    	
 		      Date today = new Date();
 		      SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a") ;
 		      out.println("현재 접속 시간: " + format.format(today));
+		      
+		      //(string, object) object는 조상님 
+		      session.setAttribute("name", "김태언");
+		      session.setAttribute("age", 20);
+		      
+		      //List <String> foods = new ArrayList<>();
+		     // foods.add("짜장면");
+		     // foods.add("짬뽕");
+		     // foods.add("탕수육");
+		      
+		     // session.setAttribute("food", foods);
+		      //세션객체의 유호시간 (초)
+		      session.setMaxInactiveInterval(5);
+		      
+		      
 		    %>
 	        <h3><%= tagline %></h3>
 

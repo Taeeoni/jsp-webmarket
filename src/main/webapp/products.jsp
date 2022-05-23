@@ -3,6 +3,8 @@
 <%@ page import="java.util.List" %>
 <%@ page import="dto.Product" %>
 <%@ page import="dao.ProductRepository" %>
+<%@page import="java.util.ArrayList"%>
+
 <!-- class에 있는걸 id의 이름으로 사용하겠다. -->
 <!DOCTYPE html>
 <html>
@@ -23,13 +25,18 @@
 	    </div>
 	</div>
 	
+	
 	<%
+	out.println(session.getAttribute("name"));
+	out.println(session.getAttribute("age"));
+	//out.println(session.getAttribute("food"));
+	
 	//6줄 => ProductRepository repository = new ProductRepository() 로 해도 된다. 
 	//Product 클래스를 사용하기위해 repository 변수를 이용해서 객체를 불러온다.
 	
 	ProductRepository repository = ProductRepository.getInstance();
 	List<Product> products = repository.getAllProducts();
-	
+
 	%>
 	
 	<div class="container">

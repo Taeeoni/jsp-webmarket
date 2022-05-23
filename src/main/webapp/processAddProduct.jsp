@@ -6,11 +6,11 @@
 <%
 request.setCharacterEncoding("UTF-8");
 
-String productId = request.getParameter("productId");
 String name = request.getParameter("name");
-int unitPrice = Integer.parseInt(request.getParameter("unitPrice"));
+String description = request.getParameter("description");
+int unitPrice = Integer.parseInt(request.getParameter("price"));
 
-Product newProduct = new Product(productId, name, unitPrice);
+Product newProduct = new Product(name, description, unitPrice);
 
 ProductRepository repository = ProductRepository.getInstance();
 repository.addProduct(newProduct);

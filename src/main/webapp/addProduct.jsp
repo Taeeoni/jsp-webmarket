@@ -23,23 +23,23 @@
     <!-- 여기에 넣을 내용을 post (쓸거다.) -->
 	    <form name="newProduct" action="./processAddProduct.jsp" class="form-horizontal" method="post">
 	        <div class="form-grout row mt-3">
-	            <label class="col-sm-2">상품 코드</label>
-	            <div class="col-sm-3">
-	                <input type="text" name="productId" class="form-control">
-	            </div>
-	        </div>
-	
-	        <div class="form-grout row mt-3">
-	            <label class="col-sm-2">상품명</label>
+	            <label class="col-sm-2">상품 이름</label>
 	            <div class="col-sm-3">
 	                <input type="text" name="name" class="form-control">
 	            </div>
 	        </div>
 	
 	        <div class="form-grout row mt-3">
+	            <label class="col-sm-2">상품설명</label>
+	            <div class="col-sm-3">
+	                <input type="text" name="description" class="form-control">
+	            </div>
+	        </div>
+	
+	        <div class="form-grout row mt-3">
 	            <label class="col-sm-2">가격</label>
 	            <div class="col-sm-3">
-	                <input type="text" name="unitPrice" class="form-control">
+	                <input type="text" name="price" class="form-control">
 	            </div>
 	        </div>
 	        
